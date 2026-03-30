@@ -1,0 +1,70 @@
+/* Wallet Adapter Overrides */
+.wallet-adapter-modal-wrapper {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.wallet-adapter-modal {
+  background-color: #0a0a0a !important;
+  border: 1px solid #e07a5d !important;
+  box-shadow: 0 0 20px rgba(224, 122, 93, 0.2) !important;
+}
+
+.wallet-adapter-modal-title {
+  color: #e07a5d !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  text-shadow: 0 0 2px rgba(224, 122, 93, 0.5) !important;
+}
+
+.wallet-adapter-modal-list li {
+  background-color: transparent !important;
+  border: 1px solid #e07a5d !important;
+  margin-bottom: 8px !important;
+  transition: all 0.2s !important;
+}
+
+.wallet-adapter-modal-list li:hover {
+  background-color: rgba(224, 122, 93, 0.1) !important;
+  box-shadow: 0 0 10px rgba(224, 122, 93, 0.3) !important;
+}
+
+.wallet-adapter-modal-list li button {
+  color: #e07a5d !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 14px !important;
+}
+
+.wallet-adapter-button {
+  background-color: transparent !important;
+  border: 1px solid #e07a5d !important;
+  color: #e07a5d !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  transition: all 0.2s !important;
+}
+
+.wallet-adapter-button:hover {
+  background-color: #e07a5d !important;
+  color: #0a0a0a !important;
+  box-shadow: 0 0 10px rgba(224, 122, 93, 0.5) !important;
+}
+
+.wallet-adapter-button-trigger {
+  background-color: transparent !important;
+  border: 1px solid #e07a5d !important;
+  color: #e07a5d !important;
+}
+
+.wallet-adapter-dropdown {
+  background-color: #0a0a0a !important;
+  border: 1px solid #e07a5d !important;
+  box-shadow: 0 0 10px rgba(224, 122, 93, 0.3) !important;
+}
+
+.wallet-adapter-dropdown-list-item {
+  color: #e07a5d !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 12px !important;
+}
+
+.wallet-adapter-dropdown-list-item:hover {
+  background-color: rgba(224, 122, 93, 0.1) !important;
+} 

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Sprig / site colors */
+  --background: 0 0% 4%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 8%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 14 61% 62%; /* #e07a5d */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 202 24% 47%; /* #496d7b */
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 55%;
+  --accent: 45 100% 70%; /* #ffd167 */
+  --accent-foreground: 0 0% 5%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 10%;
+  --input: 0 0% 10%;
+  --ring: 14 61% 62%;
+  --radius: 1.5rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-feature-settings: "liga" 0; /* Disable ligatures */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Color utility classes */
+.text-primary-color {
+  color: #e07a5d;
+}
+
+.text-secondary-color {
+  color: #496d7b;
+}
+
+.text-accent-color {
+  color: #ffd167;
+}
+
+.bg-primary-color {
+  background-color: #e07a5d;
+}
+
+.bg-secondary-color {
+  background-color: #496d7b;
+}
+
+.bg-accent-color {
+  background-color: #ffd167;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(224, 122, 93, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(224, 122, 93, 0.4);
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(224, 122, 93, 0.2);
+  color: hsl(var(--foreground));
+}
+
+/* Gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+/*
+ * LaunchMyNFT quantity slider row (official solana.html uses #slider-container).
+ */
+#slider-container {
+  width: 100%;
+  max-width: 28rem;
+}
+
+/*
+ * LaunchMyNFT: #mint-counter shows minted / total; quantity uses #mint-slider + #mint-slider-amount.
+ */
+#mint-counter {
+  width: 100%;
+  max-width: 28rem;
+}
+
+#mint-counter .MuiTypography-root,
+#mint-counter .MuiSlider-root,
+#mint-counter label,
+#mint-counter span {
+  color: hsl(var(--foreground)) !important;
+}
+
+#mint-counter .MuiSlider-track {
+  background-color: hsl(var(--primary)) !important;
+}
+
+#mint-counter .MuiSlider-thumb {
+  background-color: hsl(var(--primary)) !important;
+  border: 2px solid hsl(0 0% 6%) !important;
+}
+
+/*
+ * LaunchMyNFT injects Solana Wallet Adapter (and sometimes MUI) into
+ * #mint-button-container. Match the hero primary pill: terracotta fill,
+ * white text, thick dark border, full rounding.
+ */
+#mint-button-container .wallet-adapter-button,
+#mint-button-container .MuiButton-root,
+#mint-button-container .MuiButtonBase-root,
+#mint-button-container button {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border: 4px solid hsl(0 0% 6%) !important;
+  border-radius: 9999px !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  line-height: 1.25 !important;
+  height: auto !important;
+  min-height: 3rem !important;
+  padding: 0.75rem 1.75rem !important;
+  text-transform: lowercase !important;
+  box-shadow: none !important;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+@media (min-width: 640px) {
+  #mint-button-container .wallet-adapter-button,
+  #mint-button-container .MuiButton-root,
+  #mint-button-container .MuiButtonBase-root,
+  #mint-button-container button {
+    font-size: 1.125rem !important;
+    padding: 1rem 2rem !important;
+    min-height: 3.25rem !important;
+  }
+}
+
+#mint-button-container .wallet-adapter-button:not([disabled]):hover,
+#mint-button-container .MuiButton-root:hover,
+#mint-button-container .MuiButtonBase-root:hover,
+#mint-button-container button:not([disabled]):hover {
+  background-color: hsl(var(--primary) / 0.92) !important;
+  transform: scale(1.05);
+}
+
+#mint-button-container .wallet-adapter-button:not([disabled]):focus-visible,
+#mint-button-container .MuiButton-root:focus-visible,
+#mint-button-container .MuiButtonBase-root:focus-visible,
+#mint-button-container button:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.35) !important;
+}
+
+#mint-button-container .wallet-adapter-button[disabled] {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
